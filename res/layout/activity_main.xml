@@ -39,7 +39,7 @@
                 </EditText>
 
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/btnMAINTE_BACK"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/edt"
@@ -51,13 +51,13 @@
                     android:id="@+id/button3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/button1"
+                    android:layout_below="@+id/btnMAINTE_BACK"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="50dp"
                     android:text="一言チェック" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnDELETE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/button3"

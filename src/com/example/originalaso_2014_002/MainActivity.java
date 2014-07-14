@@ -35,11 +35,11 @@ public class MainActivity extends Activity implements View.OnClickListener  {
 		super.onResume();
 		
 		//登録ボタン変数にリスナーを登録する
-		Button btnENTRY = (Button)findViewById(R.id.button2);
+		Button btnENTRY = (Button)findViewById(R.id.btnDELETE);
 		btnENTRY.setOnClickListener(this);
 		
 		//メンテボタン変数にリスナーを登録する
-		Button btnMAITE = (Button)findViewById(R.id.button1);
+		Button btnMAITE = (Button)findViewById(R.id.btnMAINTE_BACK);
 		btnMAITE.setOnClickListener(this);
 		
 		//一言チェックボタン変数にリスナーを登録する
@@ -65,7 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
 		//生成して代入用のIntentインスタンス変数を用意
 		Intent intent = null;
 		switch(v.getId()){ //どのボタンが押されたか判定
-		case R.id.button2: //登録ボタンが押された
+		case R.id.btnDELETE: //登録ボタンが押された
 			//エディットテキストからの入力内容を取り出す
 			EditText etv = (EditText)findViewById(R.id.edt);
 			String inputMsg = etv.getText().toString();
@@ -78,12 +78,13 @@ public class MainActivity extends Activity implements View.OnClickListener  {
 			//入力欄をクリア
 			etv.setText("");
 			break;
-		case R.id.button1: //メンテボタンが押された
+		case R.id.btnMAINTE_BACK: //メンテボタンが押された
 		
 			//インテントのインスタンス生成
 		intent = new Intent(MainActivity.this,MaintenanceActivity.class);
 		//次画面のアクティビティ起動
 		startActivity(intent);
+		break;
 		case R.id.button3: //一言チェックボタンが押された
 		
 			//MySQLiteOpenHelperのセレクト一言メソッドを呼び出して一言をランダムに取得
